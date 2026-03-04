@@ -18,28 +18,34 @@
     gap:20px;
     padding: 20px;
     color: rgb(146, 144, 144);
+    
 }
 
 .container {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: rgb(16, 16, 133);
     padding: 20px;
-    margin: 20px;
 }
 
 .drop-down {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     color: white;
+    gap: 10px;
 }
 
 .input-box {
     height: 30px;
     width: 30rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
 }
 
 .date-box {
@@ -51,16 +57,113 @@
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: rgb(14, 205, 14);
-    padding: 0px 10px 0px 10px;
+    padding: 0px 30px 0px 30px;
     border: none;
 }
 
 main {
     background-color: rgb(210, 204, 197);
-    gap:10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+.box {
+    height: 20px;
+    width:40px;
+}
+
+.white {
+    background-color: white;
+}
+.green {
+    background-color: green;
+}
+.pink {
+    background-color: pink;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.identifiers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.booking-details {
+    display: flex;
+    gap: 10px;
+}
 .seats-container{
     margin: 20px;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seats-div {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hide-seats {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.booking {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 10px;
+    background-color: white;
+    gap: 10px;
+}
+.booking-btn{
+    color: white;
+    background-color: rgb(16, 16, 133);
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.lower-deck {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+.upper-deck {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+.seat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,60px);
+    gap:15px;
+    margin-top: 10px;
+}
+
+.seat{
+    width:40px;
+    height:60px;
+    border:2px solid #ccc;
+    border-radius:6px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    background:white;
 }
