@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ticket-booking.css" />
+    <link rel="stylesheet" href="ticket-booking.css" >
     <title>Document</title>
 </head>
 <body>
     <header class="head">
-        <img style="height: 100px;" src="logo.png" alt="logo">
+        <img src="logo.png" alt="logo">
 
         <nav class="navbar">
             <a href="#home">Home</a>
@@ -40,39 +40,43 @@
             </article>
             <article class="drop-down">
                 <label for="onward-date" >ONWARD DATE</label>
-                <input type="date" id="onward-date" name="onward-date" class="date-box"/>
+                <input type="date" id="onward-date" name="onward-date" class="date-box">
             </article>
             <button class="search-btn" type="button">Search bus</button>
         </div>
         <div class="seats-container">
-            <div>
-                <h3>Rajwadi Travels</h3>
+            <div class="travel-details">
+                <h2>Rajwadi Travels</h2>
                 <p>sleeper non-A/C</p>
             </div>
-            <div>
+            <div class="travel-details">
+                <h2>Departure</h2>
                 <h3>10:30 PM</h3>
                 <p>Ahmedabad</p>
             </div>
-            <div>
+            <div class="travel-details">
+                <h2>Duration</h2>
                 <p>7:00 Hrs</p>
             </div>
-            <div>
+            <div class="travel-details">
+                <h2>Arrival</h2>
                 <h3>5:30 AM</h3>
                 <p>Surat</p>
             </div>
-            <div>
-                $500
+            <div class="travel-details">
+                <h2>Charge</h2>
+                <p>$500</p>
             </div>
-            <div>
+            <div class="travel-details">
                 <button type="submit" class="hide-seats">Hide Seats</button>
-                <p style="font-size: small;">37 seats available</p>
+                <p>37 seats available</p>
                 <p>Boarding & Dropping Points | Booking Policies</p>
             </div>
         </div>
         <hr>
             <div class="seats-div">
                 <section class="lower-deck">
-                    <h3 style="padding: 10px;">LOWER - FRONT</h3>
+                    <h3>LOWER - FRONT</h3>
                     <hr>
                     <div class="seat-grid">
 
@@ -99,7 +103,7 @@
                     </div>
                 </section>
                 <section class="upper-deck">
-                    <h3 style="padding: 10px;">UPPER - FRONT</h3>
+                    <h3>UPPER - FRONT</h3>
                     <hr>
                     <div class="seat-grid">
 
@@ -126,7 +130,7 @@
                     </div>
         
                 </section>
-                <section>
+                <section class="booking-log">
                     <div class="identifiers">
                         <div class="booking-details">
                             <p class="box white"></p>
@@ -147,27 +151,26 @@
                     </div>
                     <div class="booking">
                         <label for="boarding">BOARDING POINT</label>
-                            <select name="state" id="boarding" class="input-box">
+                            <select name="state" id="boarding" class="booking-input">
                                 <option value="tamil nadu">Tamil nadu</option>
                                 <option value="west bengal">West Bengal</option>
                                 <option value="Naroda">Naroda</option>
                             </select>
 
                             <label for="dropping">DROPING POINT</label>
-                            <select name="state" id="dropping" class="input-box">
+                            <select name="state" id="dropping" class="booking-input">
                                 <option value="tamil nadu">Tamil nadu</option>
                                 <option value="west bengal">West Bengal</option>
                                 <option value="Naroda">Naroda</option>
                             </select>
 
                             <label for="seat-no">Seat No.</label>
-                            <input type="text" id="seat-no" name="seat-no" class="input-box" />
+                            <input type="text" id="seat-no" name="seat-no" class="booking-input">
 
                             <button type="submit" class="booking-btn">PROCEED TO BOOK</button>
-                        </section>
                     </div>
+                </section>
             </div>
-        </div>
     </main>
 </body>
 </html>

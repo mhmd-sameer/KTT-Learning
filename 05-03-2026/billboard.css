@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* * {
+    border: 1px solid red;
+} */
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    justify-content: space-between;
+    background-color: rgb(47, 255, 161);
+}
+
+.navbar h1{
+    font-size: 10rem;
+}
+.links a {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.links button {
+    background-color: rgb(47, 255, 161);
+    border: 1px solid black;
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    padding: 10px;
+}
+.links a{
+    font-family: system-ui;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px;   
+}
+
+.blog-1 {
+    margin: 2rem;
+    height: 12rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+.highlight {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(47,255,161);
+    text-decoration-thickness: 2px;
+}
+.news-1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
