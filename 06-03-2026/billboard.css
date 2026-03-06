@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* * {
+    border: 1px solid red;
+} */
+
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.oswald-medium {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.header-div{
+    display: flex;
+    flex:1;
+    align-items: center;
+    margin-left: 18rem;
+    margin-right: 18rem;
+}
+
+.navbar {
+    display: flex;
+
+    align-items: center;
+    height: 8rem;
+    background-color: rgb(47, 255, 161);
+}
+
+.navbar h1{
+    font-size: 5em;
+    margin-top: 6rem;
+}
+.links{
+    display: flex;
+    gap:5rem;
+    margin-left: 2rem;
+}
+
+.header-btn {
+    background-color: rgb(47, 255, 161);
+    border: 1px solid black;
+    font-size: 1.3em;
+    padding: 10px;
+}
+.links a{
+    font-family: system-ui;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px;   
+}
+
+main {
+    margin-left: 18rem;
+    margin-right: 18rem;
+    height: 80vh;
+    margin-top: 2rem;
+}
+
+.search {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search a{
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+}
+
+.btn {
+    padding: 0.5rem;
+}
+
+.main-news{
+    display: flex;
+}
+
+.blog-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    height: 12rem;
+    width: 15rem;
+    object-fit: cover;
+    text-overflow: auto;
+}
+
+.highlight {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(47,255,161);
+    text-decoration-thickness: 3px;
+    text-overflow: ellipsis;
+}
+.news-1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.left-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.center-banner {
+    display: flex;
+}
+
+.blog-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    height: 30rem;
+    width: 40rem;
+    object-fit: cover;
+    text-overflow: auto;
+}
+
+.right-banner {
+    display: flex;
+    margin-top: 2rem;
+    height: 60%;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: rgb(240, 240, 240);
+    line-height: 2rem;
+}
+
+/* @media (min-width="768px")
+{
+    .links {
+        display: block;
+    }
+} */
