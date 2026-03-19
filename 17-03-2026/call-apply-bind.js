@@ -29,3 +29,4 @@ print.apply(student2, ["Bhavani"])
 let func = print.bind(student1,"Tiruppur");
 console.log(func);
 func();
+

@@ -12,11 +12,11 @@
             <h3><span class="billione">B</span>BILLION</h3>
             <div class="sidebarLinks">
                 <div>
-                    <img src="home.png" style="height: 20px;" />
+                    <!-- <img src="home.png" style="height: 20px;" /> -->
                     <a href="#dashboard">Dashboard</a>
                 </div>
                 <div>
-                    <img src="stats.png" style="height: 20px;" />
+                    <!-- <img src="stats.png" style="height: 20px;" /> -->
                     <a href="#monitoring">API Monitoring</a>
                 </div>
                 <div>
@@ -69,46 +69,95 @@
                 <div class="grid-item-1">
                     <p>TOTAL REQUESTS</p>
                     <h2>1,284,092</h2>
+                    <p style="font-size: small; color: rgb(95, 212, 212);">12% from last week</p>
                 </div>
 
                 <div class="grid-item-2">
                     <p>AVG LATENCY (P50)</p>
-                    <h2>42 ms</p>
+                    <h2>42 ms</h2>
+                    <p style="font-size: small; color: red;">5 ms higher than avg</p>
                 </div>
 
                 <div class="grid-item-3">
                     <p>TAIL LATENCY (P99)</p>
                     <h2>312 ms</h2>
+                    <p style="font-size: small; color: grey;">stable vs last 24h</p>
                 </div>
 
                 <div class="grid-item-4">
-                    <p>ERROR RATE</p>
+                    <p>ERROR RATE <span class="mingcute--alert-fill"></span></p>
                     <h2>0.08%</h2>
+                    <p style="font-size: small; color: rgb(95, 212, 212);">0.02% decrease</p>
                 </div>
             </div>
 
             <div class="grid-charts">
                 <div class="chart">
-
+                    <div class="chart-header">
+                        <h3>REQUEST VOLUME & LATENCY</h3>
+                        <button type="button">Export</button>
+                    </div>
                 </div>
                 <div class="range">
-
-                </div>
-            </div>
-
-            <div class="endpoints">
-                <div class="endpoints-top">
-
-                    <h3>WORST PERFORMING ENDPOINTS</h3>
-
-                    <div class="search">
-                        <input type="text" placeholder="Search Endpoint">
-                        <button type="button">Copy</button>
-                        <button type="button">Excel</button>
+                    <div class="chart-header">
+                        <h3>REQUEST BY TENANT</h3>
+                        <button type="button">Export</button>
                     </div>
-                    
                 </div>
             </div>
+
+            
+                <table class="endpoints">
+                    <thead>
+                        <tr>
+                            <th colspan="5">
+                                <div class="endpoints-top">
+                                    <h3>WORST PERFORMING ENDPOINTS</h3>
+
+                                    <div class="search">
+                                        <input type="text" placeholder="Search Endpoint..." />
+                                        <button type="button">Copy</button>
+                                        <button type="button">Excel</button>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+
+                      
+                        <tr>
+                            <th>ENDPOINT</th>
+                            <th>REQUESTS</th>
+                            <th>AVG LATENCY</th>
+                            <th>P99 LATENCY</th>
+                            <th>ERROR RATE</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><a href="/api/v2/reports/heavy-asset-logs">/api/v2/reports/heavy-asset-logs</a></td>
+                            <td>1200</td>
+                            <td>250ms</td>
+                            <td>500ms</td>
+                            <td>2%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/api/v2/reports/heavy-asset-logs">/api/v2/reports/heavy-asset-logs</a></td>
+                            <td>1200</td>
+                            <td>250ms</td>
+                            <td>500ms</td>
+                            <td>2%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/api/v2/reports/heavy-asset-logs">/api/v2/reports/heavy-asset-logs</a></td>
+                            <td>1200</td>
+                            <td>250ms</td>
+                            <td>500ms</td>
+                            <td>2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            
         </section>
 
     </div>
