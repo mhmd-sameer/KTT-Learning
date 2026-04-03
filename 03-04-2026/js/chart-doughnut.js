@@ -1,0 +1,48 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+  const ctx = document.getElementById('chart-doughnut');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['DMK', 'AIADMK', 'NDA', 'Others'],
+        datasets: [{
+        data: [95, 68, 42, 29],
+        backgroundColor: [
+            '#e11d48',
+            '#15803d',
+            '#fb923c',
+            '#6b21a8'
+        ]
+        }]
+    },
+
+    options: {
+      responsive: true,
+        maintainAspectRatio: false,
+      plugins: {
+        legend: false,
+        tooltip: {
+            enabled: true,
+
+            bodyFont: {
+                size: 20   // 🔥 increase text size
+            },
+
+            titleFont: {
+                size: 18   // 🔥 title size
+            },
+
+            padding: 12,   // 🔥 space inside tooltip
+            boxPadding: 10, // spacing between color box & text
+
+            caretSize: 10   // size of the pointer arrow
+        }
+      },
+
+      cutout: '60%' 
+    }
+
+  });
+
+});

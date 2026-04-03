@@ -1,0 +1,133 @@
+
+
+/* * {
+    border: solid 1px red;
+} */
+
+body{
+    font-family: 'poppins';
+}
+
+main{
+    background-color: rgb(235, 234, 234); 
+    width: 100%;
+    padding-bottom: 32px;
+    margin-top: 100px;
+}
+
+.main-title{
+    padding-top: 16px;
+    padding-bottom: 32px
+}
+
+.grid-container  {
+    margin: 0px 160px;
+}
+
+.container > div {
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid-layout > div {
+    background-color: white;
+    height: 220px;
+    border-radius: 10px;
+    padding: 40px 20px;
+    font-size: 1.2rem;
+}
+
+.election-data {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+    gap: 20px;
+}
+
+.alliance-wise {
+    background-color: white;
+    border-radius: 10px;
+    padding : 40px 20px;
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.chart {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.legend-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 32px;
+    padding-bottom: 16px;
+    gap: 20px;
+}
+
+.card{
+    border-radius: 10px;
+    border: 1px solid rgb(169, 168, 168);
+    padding: 20px;
+}
+
+.chart-wrapper {
+    width: 45em;
+    height: 400px;
+}
+
+.election-highlights {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 20px;
+    width: 30%;
+}
+
+.records{
+    padding-top: 30px;
+}
+
+.stats-row {
+    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.stats-row:last-child{
+    border: none;
+}
+
+.value{
+    font-weight: bold;
+}
+
+.updates {
+    background-color: white;
+    border-radius: 10px;
+    padding : 40px 20px;
+    font-size: 1.5rem;
+}
+
+.update-row{
+    background-color:  rgb(235, 234, 234);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+

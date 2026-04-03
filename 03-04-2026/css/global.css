@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.5rem;
+    padding : 20px;
+    border-bottom:solid 1px rgb(235, 234, 234);
+}
+
+
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px 20px;
+}
+
+.navbar > a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.navbar > a:hover {
+    background-color: rgb(87, 190, 108);
+    color: white;
+    
+    border-radius: 10px;
+}
+
+a:focus {
+    color: darkblue;
+    background-color: rgb(235, 234, 234);
+    padding: 10px;
+    border-radius: 10px;
+}
+.search-bar {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    outline: none;
+}
+
+
+
+footer{
+    background-color: white;
+    margin: 0px 160px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    color: rgb(59, 59, 59);
+}
+
+.footer-column{
+    float: left;
+    margin: 20px;
+    width: 25%;
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0px 20px;
+}
+
+.links > a{
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+}
+
+.links > a:hover{
+    color: black;
+}
