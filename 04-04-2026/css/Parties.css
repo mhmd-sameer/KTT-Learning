@@ -1,0 +1,111 @@
+
+
+main{
+    margin-top: 100px;
+    background-color: rgb(235, 234, 234); 
+    width: 100%;
+    padding-bottom: 16px;
+    flex:1;
+}
+
+.container{
+    margin: 0px 160px;
+}
+
+.parties-title{
+    padding-top: 20px;
+}
+
+.parties-search{
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.parties-search-bar {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    outline: none;
+    border: solid 1px rgb(191, 176, 176);
+    width: 80%;
+}
+
+.parties-drop-down{
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    outline: none;
+    border: solid 1px rgb(191, 176, 176);
+    width: 20%;
+}
+
+.parties-drop-down option {
+  background-color: white;
+}
+
+.grid-container{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.grid{
+    background-color: white;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.grid-logo-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-logo{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.alliance {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: goldenrod;
+    border-radius: 10px;
+}
+
+.party-title{
+    padding-top: 20px;
+}
+
+.party-details{
+    
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgb(212, 211, 211);
+}
+
+.party-details-row{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.value{
+    font-weight: bold;
+}
+
+.seats{
+    padding: 10px 0px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}

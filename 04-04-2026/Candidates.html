@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Candidates.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-container">
+        <div id="header"></div>
+
+        <script>
+            fetch('components/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        </script>
+
+        <main>
+            <div class="container">
+                <div class="parties-title">
+                    <h1>Candidates</h1>
+                    <p>Browser All candidates contesting in the election</p>
+                </div>
+
+                <div class="parties-search">
+                    <input type="text" placeholder="search parties" class="parties-search-bar">
+
+                    <select id="parties-filter" class="parties-drop-down" >
+                        <option value="All">All Parties</option>
+                        <option value="DMK">DMK</option>
+                        <option value="AIADMK">AIADMK</option>
+                        <option value="TVK">TVK</option>
+                        <option value="NTK">NTK</option>
+                        <option value="BJP">BJP</option>
+                        <option value="INC">INC</option>
+                        <option value="Others">Others</option>
+                    </select>
+
+                    <select id="gender-filter" class="parties-drop-down" >
+                        <option value="All">All</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+
+                <div class="grid-container">  </div>
+            </div>
+        </main>
+
+        <div id="footer"></div>
+        <script>
+            fetch('components/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        </script>
+
+        <script src="js/candidates-data.js"></script>
+        <script src="js/candidates.parties.js"></script>
+    </div>
+</body>
+</html>

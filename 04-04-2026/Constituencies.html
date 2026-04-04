@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Constituencies.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-container">
+        <div id="header"></div>
+
+        <script>
+            fetch('components/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        </script>
+
+        <main>
+            <div class="container">
+                <div class="parties-title">
+                    <h1>Constituencies</h1>
+                    <p>234 Assembly Constituencies across 38 districts</p>
+                </div>
+
+                <div class="parties-search">
+                    <input type="text" placeholder="search parties" class="parties-search-bar">
+
+                    <select id="alliance-filter" class="parties-drop-down" >
+                        <option value="All">All Districts</option>
+                        <option value="DMK">DMK</option>
+                        <option value="AIADMK">AIADMK</option>
+                        <option value="TVK">TVK</option>
+                        <option value="NTK">NTK</option>
+                        <option value="BJP">BJP</option>
+                        <option value="INC">INC</option>
+                        <option value="Others">Others</option>
+                    </select>
+
+                    <select id="alliance-filter" class="parties-drop-down" >
+                        <option value="All">All Types</option>
+                        <option value="DMK Alliance">DMK Alliance</option>
+                        <option value="AIADMK Alliance">AIADMK Alliance</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+
+                <div class="constituencies-container">
+                    <h2>Constituencies</h2>
+                    <div class="constituencies-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Constituency</td>
+                                    <td>District</td>
+                                    <td>Type</td>
+                                    <td>Voters</td>
+                                    <td>Candidates</td>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer"></div>
+        <script>
+            fetch('components/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        </script>
+
+        <script src="js/parties-data.js"></script>
+        <script src="js/parties.js"></script>
+        <script src="js/dropdown.js"></script>
+    </div>
+</body>
+</html>
