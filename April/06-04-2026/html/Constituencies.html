@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Constituencies.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-container">
+        <div id="header"></div>
+
+        <script>
+            fetch('../components/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        </script>
+
+        <main>
+            <div class="container">
+                <div class="parties-title">
+                    <h1>Constituencies</h1>
+                    <p>234 Assembly Constituencies across 38 districts</p>
+                </div>
+
+                <div class="parties-search">
+                    <input type="text" placeholder="search parties" class="parties-search-bar">
+
+                    <select id="district-filter" class="parties-drop-down">
+                        <option value="All">All Districts</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                        <option value="Madurai">Madurai</option>
+                        <option value="Salem">Salem</option>
+                        <option value="Tiruchirappalli">Tiruchirappalli</option>
+                        <option value="Tirunelveli">Tirunelveli</option>
+                        <option value="Erode">Erode</option>
+                        <option value="Vellore">Vellore</option>
+                        <option value="Thoothukudi">Thoothukudi</option>
+                        <option value="Kanchipuram">Kanchipuram</option>
+                        <option value="Others">Others</option>
+                    </select>
+
+                    <select id="type-filter" class="parties-drop-down">
+                        <option value="All">All Types</option>
+                        <option value="General">General</option>
+                        <option value="SC">SC (Scheduled Caste)</option>
+                        <option value="ST">ST (Scheduled Tribe)</option>
+                    </select>
+                </div>
+
+                <div class="constituencies-container">
+                    <h2>Constituencies</h2>
+                    <div class="constituencies-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Constituency</td>
+                                    <td>District</td>
+                                    <td>Type</td>
+                                    <td>Voters</td>
+                                    <td>Candidates</td>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <div class="table-container-bottom">
+                        <p id="page-info"></p>
+                        <div class="constituencies-button">
+                            <button type="button" id="prevBtn" onclick="previousPage()" > &lt; Previous</button>
+                            <button type="button" id="nxtBtn" onclick="nextPage()">Next &gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer"></div>
+        <script>
+            fetch('../components/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        </script>
+
+        <script src="../js/data/constituency-data.js"></script>
+        <script src="../js/constituencies.visualize.js"></script>
+    </div>
+</body>
+</html>

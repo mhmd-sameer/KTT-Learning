@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Parties.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-container">
+        <div id="header"></div>
+
+        <script>
+            fetch('../components/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        </script>
+
+        <main>
+            <div class="container">
+                <div class="parties-title">
+                    <h1>Political Parties</h1>
+                    <p>All registered participating in Tamil Nadu Assembly Election 2026</p>
+                </div>
+
+                <div class="parties-search">
+                    <input type="text" placeholder="search parties" class="parties-search-bar" id="parties-search-bar">
+
+                    <select id="alliance-filter" class="parties-drop-down" >
+                        <option value="All">All</option>
+                        <option value="DMK Alliance">DMK Alliance</option>
+                        <option value="AIADMK Alliance">AIADMK Alliance</option>
+                        <option value="Others">Others</option>
+                    </select>
+
+                    <!-- <div class="parties-drop-down" id="alliance-filter">
+                        <div class="dropdown-selected">Select Option</div>
+                        <div class="dropdown-list">
+                            <div class="dropdown-item">Option 1</div>
+                            <div class="dropdown-item">Option 2</div>
+                            <div class="dropdown-item">Option 3</div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <div class="grid-container" id="parties-card">   </div>
+            </div>
+        </main>
+
+        <div id="footer"></div>
+        <script>
+            fetch('../components/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        </script>
+
+        <script src="../js/data/parties-data.js"></script>
+        <script src="../js/parties.dropdown.js"></script>
+
+    </div>
+    
+</body>
+</html>

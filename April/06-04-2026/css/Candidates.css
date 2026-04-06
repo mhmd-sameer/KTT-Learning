@@ -1,0 +1,117 @@
+
+
+main{
+    margin-top: 100px;
+    background-color: rgb(235, 234, 234); 
+    width: 100%;
+    padding-bottom: 16px;
+    flex:1; 
+}
+
+.container{
+    margin: 0px 160px;
+}
+
+.parties-title{
+    padding-top: 20px;
+}
+
+.parties-search{
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.parties-search-bar {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    outline: none;
+    border: solid 1px rgb(191, 176, 176);
+    width: 80%;
+}
+
+.parties-drop-down{
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    outline: none;
+    border: solid 1px rgb(191, 176, 176);
+    width: 20%;
+}
+
+.parties-drop-down option {
+  background-color: white;
+}
+
+.grid-container{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.grid{
+    background-color: white;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.grid-top{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.candidate-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(225, 60, 139);
+    border-radius: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.candidate-title{
+    font-size: 1.2rem;
+}
+
+.candidate-party{
+    border: 3px solid rgb(225, 60, 139);
+    border-radius: 10px;
+    color: rgb(225, 60, 139);
+    font-weight: 600;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-body {
+    padding: 10px;
+    border-bottom: 1px solid rgb(212, 211, 211);
+}
+
+.grid-body > p {
+    padding: 5px;
+}
+
+.grid-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.gender {
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}

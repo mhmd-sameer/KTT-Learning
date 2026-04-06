@@ -1,0 +1,92 @@
+
+
+main{
+    margin-top: 100px;
+    background-color: rgb(235, 234, 234); 
+    width: 100%;
+    padding-bottom: 16px;
+    flex:1; 
+}
+
+
+.container{
+    margin: 0px 160px;
+}
+
+.parties-title{
+    padding-top: 20px;
+}
+
+.parties-search{
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.parties-search-bar {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    outline: none;
+    border: solid 1px rgb(191, 176, 176);
+    width: 80%;
+}
+
+.parties-drop-down{
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    outline: none;
+    border: solid 1px rgb(191, 176, 176);
+    width: 20%;
+}
+
+.parties-drop-down option {
+  background-color: white;
+}
+
+.constituencies-container{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.constituencies-table{
+
+    padding-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+table{
+    width: 100%;
+    font-size: 1.5rem;
+}
+thead{
+    background-color: rgb(235, 234, 234);
+}
+
+td{
+    padding: 10px;
+}
+
+.table-container-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.constituencies-button > button{
+    background-color: white;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+

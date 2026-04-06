@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Dashboard.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="page-container">
+        <script src="../js/charts/chart-doughnut.js"></script>
+        <script src="../js/charts/chart-horizontal-bar.js"></script>
+        
+
+        <div id="header"></div>
+
+        <script>
+            fetch('../components/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        </script>
+
+
+        <main class="main">
+            <div class="grid-container">
+                <div class="main-title">
+                    <h1>Tamil Nadu Assembly Election 2026</h1>
+                    <p>Live election data and analytics dashboard</p>
+                </div>
+
+                <div class="grid-layout">
+                    <div>
+                        <p>Total Constituencies</p>
+                        <h2>234</h2>
+                        <p>Tamil Nadu Assembly</p>
+                    </div>
+                    <div>
+                        <p>Participating Parties</p>
+                        <h2>8</h2>
+                        <p>Registered parties</p>
+                        <p style="color: rgb(8, 103, 27);">+2 from 2021</p>
+                    </div>
+                    <div>
+                        <p>Total Candidates</p>
+                        <h2>2,808</h2>
+                        <p>COntesting Seats</p>
+                        <p style="color: rgb(8, 103, 27);">+156 from 2021</p>
+                    </div>
+                    <div>
+                        <p>Registered Voters</p>
+                        <h2>62.9M</h2>
+                        <p>77.8% turnout(2021)</p>
+                        <p style="color: rgb(8, 103, 27);">+4.2M new voters</p>
+                    </div>
+                </div>
+                <div class="election-data">
+                    <div class="alliance-wise">
+                        <h2>Tamil Nadu Assembly Election 2026</h2>
+                        <p>Alliance-wise seat distribution (Projected)</p>
+
+                        <div class="chart">
+                            <div class="chart-wrapper">
+                                <canvas id="chart-doughnut"></canvas>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="chart-horizontal-bar"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="legend-cards">
+                            <div class="card">
+
+                                <h3>DMK Alliance</h3>
+                                <p>90 seats</p>
+                            </div>
+                            <div class="card">
+                                <h3>AIADMK Alliance</h3>
+                                <p>63 seats</p>
+                            </div>
+                            <div class="card">
+                                <h4>TVK</h4>
+                                <p>38 seats</p>
+                            </div>
+                            <div class="card">
+                                <h4>NTK</h4>
+                                <p>29 seats</p>
+                            </div>
+                            <div class="card">
+                                <h3>Others</h3>
+                                <p>14 seats</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="election-highlights">
+                        <h2>Election Highlights</h2>
+                        <p>Key statistics for 2026 election</p>
+
+                        <div class="records">
+                            <div class="stats-row">
+                                <span>Pooling Phase</span>
+                                <span class="value">68,324</span>
+                            </div>
+                            <div class="stats-row">
+                                <span>Pooling Stations</span>
+                                <span class="value">2.8 Million</span>
+                            </div>
+                            <div class="stats-row">
+                                <span>First-time Voters</span>
+                                <span class="value">51.2%</span>
+                            </div>
+                            <div class="stats-row">
+                                <span>Female Voters</span>
+                                <span class="value">44</span>
+                            </div>
+                            <div class="stats-row">
+                                <span>Election Officals</span>
+                                <span class="value">2.5 Lakh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="updates">
+                    <h2>Recent Updates</h2>
+                    <p>Latest news and notifications</p>
+
+                    <div class="update-row">
+                        <p class="subtitle">Nomination Filing Begins</p>
+                        <p>Candidates can now file nominations at designated across all 234 constituencies</p>
+                    </div>
+                    <div class="update-row">
+                        <p class="subtitle">Final Electoral Roll Published</p>
+                        <p>6.29 crore voters registered for Tamil Nadu Assembly Election 2026.</p>
+                    </div>
+                    <div class="update-row">
+                        <p class="subtitle">Model Code of Conduct in Effect</p>
+                        <p>All political parties must adhere to the model code of conduct until polling concludes.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        
+        <div id="footer"></div>
+
+        <script>
+            fetch('../components/footer.html')
+            .then(res => res.text())
+            .then(data =>{
+                document.getElementById('footer').innerHTML = data;
+            });
+        </script>
+    </div>
+</body>
+</html>
