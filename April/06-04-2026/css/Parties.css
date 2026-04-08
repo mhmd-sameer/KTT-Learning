@@ -48,6 +48,10 @@ main{
   background-color: white;
 }
 
+option {
+    padding: 20px;
+}
+
 .grid-container{
     padding-top: 30px;
     display: grid;
@@ -80,6 +84,7 @@ main{
     align-items: center;
     padding: 10px;
     background-color: goldenrod;
+    font-weight: bold;
     border-radius: 10px;
 }
 
@@ -109,3 +114,5 @@ main{
     display: flex;
     justify-content: space-between;
 }
+
+

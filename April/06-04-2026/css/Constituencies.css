@@ -63,6 +63,21 @@ main{
     border-radius: 10px;
 }
 
+.table-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-head > button{
+    background-color: rgb(117, 117, 241);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 table{
     width: 100%;
     font-size: 1.5rem;

@@ -62,7 +62,6 @@ main{
     padding: 20px;
 }
 
-
 .grid-top{
     display: flex;
     align-items: center;
@@ -103,15 +102,9 @@ main{
     padding: 5px;
 }
 
-.grid-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
 
-.gender {
-    background-color: orangered;
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
+.main-tab {
+    height: 200px;
+    width: 100%;
+    font-size: 1.5rem;
 }

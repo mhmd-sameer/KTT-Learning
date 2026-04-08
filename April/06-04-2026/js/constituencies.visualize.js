@@ -1,14 +1,20 @@
 const container = document.getElementById('table-body');
 
+const DistrictFilter = document.getElementById('district-filter');
+const TypeFilter = document.getElementById('type-filter');
+const searchInput = document.getElementById('search-constituencies');
+
+
 let currentPage = 1;
 let rowsPerPage = 10;
 let fullData = [];
 let totalPages = 0;
+let filteredData = [];
 
 function renderConstituencies(data) {
     fullData = data;
+    filteredData = data;
     totalPages = Math.ceil(fullData.length / rowsPerPage);
-
     displayPage();
 }
 
@@ -16,13 +22,17 @@ function renderConstituencies(data) {
 function displayPage(){
     container.innerHTML = ""; 
 
+    if(filteredData.length===0){
+        container.innerHTML = `<tr><td colspan=5>No result found </td></tr>`;
+        document.getElementById('page-info').innerHTML = 'page 0 of 0';
+        return;
+    }
     let rows = "";
 
-    console.log(currentPage);
     let start = (currentPage - 1)* rowsPerPage;
     let end = start + rowsPerPage;
 
-    let paginatedData = fullData.slice(start,end);
+    let paginatedData = filteredData.slice(start,end);
 
     paginatedData.forEach(constituency => {
         const candidates = constituency.candidates.length
@@ -48,27 +58,47 @@ function displayPage(){
 }
 
 
-const DistrictFilter = document.getElementById('district-filter');
-const TypeFilter = document.getElementById('type-filter');
 
-function filterDistrict() {
+
+function ApplyFilter() {
 
     const selectedDistrict = DistrictFilter.value;
     const selectedType = TypeFilter.value;
+    const query = searchInput.value.toLowerCase().trim();
 
-    const filtered = constituencies.filter( constituency =>{
-        return(
-            (selectedDistrict === 'All' || selectedDistrict === constituency.district) &&
-            (selectedType === 'All' || selectedType === constituency.type)
-        );
+    filteredData = fullData.filter( constituency =>{
+
+    const constituencyName = constituency.constituency.toLowerCase();
+    const districtName = constituency.district.toLowerCase();
+    const candidates = constituency.candidates.join(", ").toLowerCase();
+
+    const isExactMatch =
+        constituencyName === query ||
+        districtName === query ||
+        candidates === query;
+
+    const isPartialMatch =
+        constituencyName.includes(query) ||
+        districtName.includes(query) ||
+        candidates.includes(query);
+
+    return (
+        (selectedDistrict === 'All' || selectedDistrict === constituency.district) &&
+        (selectedType === 'All' || selectedType === constituency.type) &&
+        (query === "" || isExactMatch || isPartialMatch)
+    );
     })
 
-    console.log(selectedDistrict);
-    renderConstituencies(filtered);
-}
+    currentPage=1;
+    totalPages = Math.ceil(filteredData.length/rowsPerPage);
 
-document.addEventListener("change",filterDistrict);
-document.addEventListener("change", filterDistrict);
+    console.log(selectedDistrict);
+    displayPage();
+}
+    
+DistrictFilter.addEventListener("change",ApplyFilter);
+TypeFilter.addEventListener("change", ApplyFilter);
+searchInput.addEventListener("input",ApplyFilter);
 
 
 function previousPage(){
@@ -85,6 +115,35 @@ function nextPage(){
     }
 }
 
+function exportData(){
+    exportDataToCsv(filteredData);
+}
 
+function exportDataToCsv(filteredData, filename = "table-data.csv"){
+    let csv = [];
+
+    const headers = ["constituency", "district", "type", "voters", "candidates"];
+    csv.push(headers.join(","));
+
+    filteredData.forEach(item => {
+        let row = headers.map(key => {
+            console.log(key);
+            let value = item[key] ?? "";
+            value = value.toString().replace(/"/g, '""');
+            return `"${value}"`;
+        });
+        csv.push(row.join(","));
+    });
+
+    const csvString = csv.join("\n");
+
+    const blob = new Blob([csvString], {type: "text/csv"});
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.click();
+}
 renderConstituencies(constituencies);
 

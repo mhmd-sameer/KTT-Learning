@@ -1,6 +1,9 @@
 
 
 const container = document.getElementById("parties-card");
+const searchbar = document.getElementById('parties-search-bar');
+const allianceFilter = document.getElementById("alliance-filter");
+
 
 function renderParties(data){
 
@@ -48,30 +51,38 @@ function renderParties(data){
 });
 }
 
-const searchbar = document.getElementById('parties-search-bar');
 
-function searchbarFilter() {
-    const text = searchbar.value.toLowerCase();
-
-    const filtered = parties.filter(party =>
-        party
-    )
-}
-
-
-const allianceFilter = document.getElementById("alliance-filter");
 
 function filterParties(){
     const selectedAlliance = allianceFilter.value;
+    const query = searchbar.value.toLowerCase().trim();
 
-    const filtered = parties.filter(
-        p => p.alliance === selectedAlliance
-    );
+    const filtered = parties.filter(party =>{
+
+        const name = party.name.toLowerCase();
+        const fullName = party.fullName.toLowerCase();
+        const leader = party.leader.toLowerCase();
+
+        const matchesSearch =
+            query === "" ||
+            name.includes(query) ||
+            fullName.includes(query) ||
+            leader.includes(query);
+
+        const matchesAlliance =
+            selectedAlliance === "All" ||
+            party.alliance === selectedAlliance;
+
+        return matchesSearch && matchesAlliance;
+    });
+
     renderParties(filtered);
 }
 
+allianceFilter.addEventListener("change",filterParties);
+searchbar.addEventListener("input",filterParties);
+
 renderParties(parties);
 
-document.addEventListener("change",filterParties);
 
 

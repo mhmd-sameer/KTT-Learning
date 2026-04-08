@@ -27,17 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: true,
 
             bodyFont: {
-                size: 20   // 🔥 increase text size
+                size: 20   
             },
 
             titleFont: {
-                size: 18   // 🔥 title size
+                size: 18   
             },
 
-            padding: 12,   // 🔥 space inside tooltip
-            boxPadding: 10, // spacing between color box & text
+            padding: 12,   
+            boxPadding: 10,
 
-            caretSize: 10   // size of the pointer arrow
+            caretSize: 10   
         }
       },
 
