@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+header{
+   background-color: rgb(17, 8, 78);
+   padding: 10px; 
+   color: white;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.delete-btn{
+    
+    padding: 10px;
+   
+}
+
+.delete-btn > a{
+    background-color: rgb(238, 122, 122);
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.edit-btn{
+    padding: 10px;
+}
+
+.edit-btn > a{
+    background-color: rgb(232, 224, 0);
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+main{
+    padding: 10px;
+}
+
+.user-details{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.users{
+    border: 1px grey solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.main-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.search-box{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-btn {
+    background-color: rgb(58, 124, 177);
+    border: none;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.add-btn {
+    padding: 10px;
+}
+
+.add-btn>a{
+    background-color: rgb(100, 189, 100);
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
