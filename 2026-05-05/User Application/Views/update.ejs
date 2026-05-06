@@ -8,27 +8,65 @@
     <link rel="stylesheet" href="/update.css">
 </head>
 <body>
+    <%- include("partials/header") %>
+    <main>
+        <section class="page-card">
+            <div class="card-header">
+                <h1>Update User</h1>
+            </div>
 
-    <h1 class="title">Update User</h1>
+            <form id="updateForm" class="form-container" onsubmit="handleUpdateSubmit(event)">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<%= user.username %>" required />
+                </div>
 
-    <form action="/update/<%= user.id %>" method="POST" class="form-container">
-        
-        <div class="form-group">
-            <label for="username"><strong>Username:</strong></label>
-            <input type="text" id="username" name="username" value="<%= user.username %>" required />
-        </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="<%= user.email %>" required />
+                </div>
 
-        <div class="form-group">
-            <label for="email"><strong>Email:</strong></label>
-            <input type="email" id="email" name="email" value="<%= user.email %>" required />
-        </div>
+                <button type="submit" class="btn-submit">Update User</button>
+            </form>
 
-        <button type="submit" class="btn-submit">Update User</button>
-    </form>
+            <div class="back-link">
+                <a href="/home">Back to Home</a>
+            </div>
+        </section>
+    </main>
 
-    <div class="back-link">
-        <a href="/">Back to Home</a>
-    </div>
+    <script>
+        async function handleUpdateSubmit(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const userId = '<%= user.id %>';
+            
+            try {
+                const response = await fetch(`/update/${userId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        email: email
+                    })
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    window.location.href = data.redirect;
+                } else {
+                    alert('Error updating user');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error updating user');
+            }
+        }
+    </script>
 
 </body>
 </html>

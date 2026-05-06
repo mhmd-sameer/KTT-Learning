@@ -1,5 +1,6 @@
 const db = require("../db/queries");
 
+
 async function getUsernames(req, res){
     const data = await db.getAllUsernames();
     console.log(data);
@@ -22,19 +23,19 @@ async function getUsername(req, res){
     });
 }
 
-async function createUsernameGet(req, res){
+async function createUserGet(req, res){
     res.render("form");
 }
 
-async function createUsernamePost(req,res){
-    const {username,email} = req.body;
-    await db.insertNewUser(username,email);
-    res.redirect("/");
+async function createUserPost(req,res){
+    const {username,email,password,role} = req.body;
+    await db.insertNewUser(username,email,password,role || 'EMPLOYEE');
+    res.redirect("/home");
 }
 
 async function deleteUsers(req,res) {
     await db.deleteAllUsers();
-    res.redirect("/");
+    res.json({success: true, message: "All users deleted", redirect: "/home"});
 }
 
 async function getUpdateForm(req, res) {
@@ -56,20 +57,20 @@ async function updateUser(req, res) {
     const {username, email} = req.body;
     
     await db.updateUser(id, username, email);
-    res.redirect("/");
+    res.json({success: true, message: "User updated", redirect: "/home"});
 }
 
 async function deleteUserById(req,res) {
     const {id} = req.params;
 
     await db.deleteUser(id);
-    res.redirect("/");
+    res.json({success: true, message: "User deleted", redirect: "/home"});
 }
 
 module.exports = {
     getUsernames,
-    createUsernameGet,
-    createUsernamePost,
+    createUserGet,
+    createUserPost,
     getUsername,
     deleteUsers,
     getUpdateForm,

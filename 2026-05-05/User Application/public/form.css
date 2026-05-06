@@ -1,67 +1,109 @@
-body {
-    font-family: Poppins;
-    background-color: #f8f9fa;
-}
-
-
-.title {
-    text-align: center;
-    margin-top: 20px;
-}
-
-
-.form-container {
-    max-width: 400px;
-    margin: 20px auto;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-
-.form-group input {
-    width: 100%;
-    padding: 8px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Poppins, sans-serif;
 }
 
+body{
+    min-height: 100vh;
+    background-color: #ecedef;
+}
 
-.btn-submit {
-    background-color: #28a745;
+header{
+    background-color: #1e3c72;
+    padding: 18px 24px;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
 }
 
-.btn-submit:hover {
-    background-color: #218838;
+main{
+    max-width: 640px;
+    margin: 40px auto;
+    padding: 0 20px 40px;
 }
 
+.page-card{
+    background: white;
+    border-radius: 28px;
+    padding: 32px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
 
-.back-link {
+.card-header h1{
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 28px;
+    color: #1e3c72;
+    font-family: Oswald, sans-serif;
 }
 
-.back-link a {
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select{
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dfe3ea;
+    border-radius: 12px;
+    outline: none;
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color: #1e3c72;
+    box-shadow: 0 0 10px rgba(30,60,114,0.12);
+}
+
+.btn-submit{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #1e3c72;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-submit:hover{
+    background-color: #16325c;
+}
+
+.back-link{
+    margin-top: 24px;
+    text-align: center;
+}
+
+.back-link a{
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #f4f7fb;
+    color: #1e3c72;
     text-decoration: none;
-    color: #007bff;
+    font-weight: 700;
 }
 
-.back-link a:hover {
-    text-decoration: underline;
+.back-link a:hover{
+    background: #e8eff9;
+}
+
+@media (max-width: 600px){
+
+    .page-card{
+        padding: 24px;
+    }
+
 }

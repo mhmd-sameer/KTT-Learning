@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signUp.css" />
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="POST">
+        <h1>Sign Up</h1>
+        <label for="name">Username : </label>
+        <input type="text" placeholder="Enter your name" id="name" name="username" required>
+        <br><br>
+
+        <label for="e-mail">E-mail : </label>
+        <input type="email" placeholder="Enter your e-mail" id="e-mail" name="email" required>
+        <br><br>
+
+        <label for="pass">Password : </label>
+        <input type="password" placeholder="Enter your password" id="pass" name="password" required>
+        <br><br>
+
+        <label for="role">Role : </label>
+        <select name="role">
+            <option value="ADMIN">Admin</option>
+            <option value="HR">Hr</option>
+            <option value="MANAGER">Manager</option>
+            <option value="EMPLOYEE">Employee</option>
+        </select>
+        <br><br>
+        <button type="submit">Sign up</button>
+        
+        <div>
+            <p>Already have an account?<span><a href="/login"> login</a></span></p>
+        </div>
+    </form>
+</body>
+</html>
